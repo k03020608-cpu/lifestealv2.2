@@ -27,7 +27,13 @@ public final class LifestealPlugin extends JavaPlugin {
             wyplac.setExecutor(new WithdrawCommand(hearts));
         }
 
-        // Na wypadek przeładowania pluginu, gdy gracze są już online
+        AdminWithdrawCommand adminWithdraw = new AdminWithdrawCommand(hearts);
+        PluginCommand wyplacgraczowi = getCommand("wyplacgraczowi");
+        if (wyplacgraczowi != null) {
+            wyplacgraczowi.setExecutor(adminWithdraw);
+            wyplacgraczowi.setTabCompleter(adminWithdraw);
+        }
+
         for (Player player : getServer().getOnlinePlayers()) {
             hearts.apply(player);
         }
