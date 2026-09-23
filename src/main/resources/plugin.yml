@@ -13,6 +13,10 @@ commands:
     description: Wypłać serca jako przedmioty
     usage: /wyplac [ilość]
     permission: lifesteal.wyplac
+  wyplacgraczowi:
+    description: Zabierz serca innemu graczowi, przedmioty trafiają do Ciebie
+    usage: /wyplacgraczowi <gracz> <ilość>
+    permission: lifesteal.wyplacgraczowi
 
 permissions:
   lifesteal.admin:
@@ -21,3 +25,6 @@ permissions:
   lifesteal.wyplac:
     description: Pozwala użyć /wyplac
     default: true
+  lifesteal.wyplacgraczowi:
+    description: Pozwala użyć /wyplacgraczowi (admin)
+    default: op
