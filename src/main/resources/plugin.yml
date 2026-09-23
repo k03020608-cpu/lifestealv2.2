@@ -1,0 +1,23 @@
+name: Lifesteal
+version: '1.0.0'
+main: pl.lifesteal.LifestealPlugin
+api-version: '26.2'
+description: Lifesteal - kradzież serc, serca jako przedmioty i wypłacanie
+
+commands:
+  lifesteal:
+    description: Zarządzanie pluginem Lifesteal
+    usage: /lifesteal <on|off|status|oznacz|ustawitem>
+    permission: lifesteal.admin
+  wyplac:
+    description: Wypłać serca jako przedmioty
+    usage: /wyplac [ilość]
+    permission: lifesteal.wyplac
+
+permissions:
+  lifesteal.admin:
+    description: Włączanie/wyłączanie pluginu, oznaczanie przedmiotów, ustawianie przedmiotu wypłacanego
+    default: op
+  lifesteal.wyplac:
+    description: Pozwala użyć /wyplac
+    default: true

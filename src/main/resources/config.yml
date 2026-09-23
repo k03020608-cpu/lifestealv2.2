@@ -1,0 +1,26 @@
+# Czy Lifesteal jest włączony. Zmieniasz to komendą /lifesteal on|off
+enabled: true
+
+# Ile serc ma gracz na start (1 serce = 2 HP, 10 serc = zwykłe 20 HP)
+starting-hearts: 10
+
+# Maksymalna liczba serc. Kto ma już maksimum, dostaje serce jako przedmiot.
+max-hearts: 20
+
+# Ile serc gracz musi sobie zostawić po wypłacie (/wyplac)
+min-hearts-after-withdraw: 1
+
+# Czy gracz traci serce także przy śmierci nie z ręki gracza (lawa, mob, upadek...)
+lose-heart-on-natural-death: true
+
+# Co się dzieje, gdy gracz straci ostatnie serce:
+# true  = dostaje bana (komendą /ban), po odbanowaniu wraca z revive-hearts sercami
+# false = nie może zejść poniżej 1 serca
+ban-at-zero-hearts: true
+ban-reason: "Straciłeś wszystkie serca!"
+
+# Ile serc ma gracz po powrocie z bana
+revive-hearts: 3
+
+# Przedmiot wypłacany przez /wyplac ustawiasz komendą /lifesteal ustawitem
+# (zapisze się tu sam jako "withdraw-item"). Bez ustawienia to Gwiazda Netheru.
