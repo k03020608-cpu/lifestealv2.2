@@ -53,6 +53,12 @@ public final class LifestealListener implements Listener {
         }
 
         Player victim = event.getEntity();
+
+        // Gracz w trakcie pojedynku (plugin Pojedynek) nie traci ani nie zyskuje serca za tę śmierć.
+        if (victim.hasMetadata("wPojedynku")) {
+            return;
+        }
+
         Player killer = victim.getKiller();
 
         if (killer == null && !plugin.getConfig().getBoolean("lose-heart-on-natural-death", true)) {
